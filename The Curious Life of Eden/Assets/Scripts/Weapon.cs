@@ -34,6 +34,7 @@ public class Weapon : Item, IAttackable
     /// <param name="other"></param>
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Triggered");
         Health healthScript = other.gameObject.GetComponent<Health>();
         if (healthScript != null)
         {

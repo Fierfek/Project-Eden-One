@@ -5,7 +5,7 @@ public abstract class Effector : MonoBehaviour
 {
     private float timeElapsed = 0f;
     public float timeDuration;
-    public EffectType effect;
+    public EffectType type;
 
     public enum EffectType
     {
@@ -17,7 +17,7 @@ public abstract class Effector : MonoBehaviour
 
     private void Update()
     {
-        if (effect != EffectType.None)
+        if (type != EffectType.None)
             //Check if item has duration
             if (timeDuration > 0)
             {
@@ -30,7 +30,7 @@ public abstract class Effector : MonoBehaviour
                 //Otherwise destroy script
                 else
                 {
-                    if(effect == EffectType.Slow || effect == EffectType.Paralysis)
+                    if(type == EffectType.Slow || type == EffectType.Paralysis)
                     Destroy(this);
                 }
             }
