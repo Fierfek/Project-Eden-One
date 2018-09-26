@@ -30,7 +30,8 @@ public abstract class Effector : MonoBehaviour
                 //Otherwise destroy script
                 else
                 {
-                    if(type == EffectType.Slow || type == EffectType.Paralysis)
+                    if (type == EffectType.Slow || type == EffectType.Paralysis)
+                        RevertEffect();
                     Destroy(this);
                 }
             }
