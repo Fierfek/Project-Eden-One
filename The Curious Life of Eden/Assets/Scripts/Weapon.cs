@@ -2,6 +2,7 @@
 
 public class Weapon : Item, IAttackable
 {
+    public GameObject[] effects;
     public int damage;
     public bool isRanged;
     
@@ -37,6 +38,7 @@ public class Weapon : Item, IAttackable
         if (healthScript != null)
         {
             healthScript.takeDamage(damage);
+            healthScript.takeEffects(effects);
         }
     }
 }
