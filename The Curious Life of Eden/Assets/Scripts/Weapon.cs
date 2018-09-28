@@ -2,6 +2,7 @@
 
 public class Weapon : Item, IAttackable
 {
+    public GameObject[] effects;
     public int damage;
     public bool isRanged;
     
@@ -33,10 +34,12 @@ public class Weapon : Item, IAttackable
     /// <param name="other"></param>
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Triggered");
         Health healthScript = other.gameObject.GetComponent<Health>();
         if (healthScript != null)
         {
             healthScript.takeDamage(damage);
+            healthScript.takeEffects(effects);
         }
     }
 }
