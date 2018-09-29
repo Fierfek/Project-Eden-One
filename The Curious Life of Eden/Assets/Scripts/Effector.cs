@@ -18,6 +18,7 @@ public abstract class Effector : MonoBehaviour
     private void Update()
     {
         if (type != EffectType.None)
+        {
             //Check if item has duration
             if (timeDuration > 0)
             {
@@ -41,11 +42,12 @@ public abstract class Effector : MonoBehaviour
                 DoEffect();
                 Destroy(this);
             }
+        }
     }
 
     //ITEM EFFECT GOES HERE
-    public abstract void DoEffect();
+    protected abstract void DoEffect();
 
     //REVERT EFFECT HERE (for effects like paralysis)
-    public abstract void RevertEffect();
+    protected abstract void RevertEffect();
 }

@@ -30,9 +30,9 @@ public class Health : MonoBehaviour
             switch (effect.type)
             {
                 case Effector.EffectType.Paralysis:
-                        gameObject.AddComponent<Paralysis>();
-                        GetComponent<Paralysis>().timeDuration = effect.timeDuration;
-                        GetComponent<Paralysis>().type = effect.type;
+                        Paralysis entityEffect = gameObject.AddComponent<Paralysis>();
+                        entityEffect.timeDuration = effect.timeDuration;
+                        entityEffect.type = effect.type;
                     break;
             }
         }

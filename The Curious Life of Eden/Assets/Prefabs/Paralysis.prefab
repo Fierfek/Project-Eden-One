@@ -52,4 +52,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeDuration: 5
-  effect: 2
+  type: 2
