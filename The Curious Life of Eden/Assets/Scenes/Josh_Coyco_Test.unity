@@ -123,10 +123,11 @@ GameObject:
   - component: {fileID: 780660645}
   - component: {fileID: 780660644}
   - component: {fileID: 780660643}
+  - component: {fileID: 780660647}
   - component: {fileID: 780660642}
   - component: {fileID: 780660646}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: dummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -214,7 +215,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 780660641}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.776, y: 0.038, z: 0}
+  m_LocalPosition: {x: 1.09, y: 0.3, z: 0}
   m_LocalScale: {x: 3.65, y: 3.46, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -227,7 +228,7 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 780660641}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -240,6 +241,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &780660647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 780660641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9783c480c537768478d2c816c77d9040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwingItem: {fileID: 0}
+  throwSpeed: 0
 --- !u!1001 &800137854
 Prefab:
   m_ObjectHideFlags: 0
@@ -249,11 +263,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4342024019132848, guid: 22d4d5f7d8a3d7847a1d5f35d5572691, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.98
       objectReference: {fileID: 0}
     - target: {fileID: 4342024019132848, guid: 22d4d5f7d8a3d7847a1d5f35d5572691, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 4342024019132848, guid: 22d4d5f7d8a3d7847a1d5f35d5572691, type: 2}
       propertyPath: m_LocalPosition.z
