@@ -12,13 +12,13 @@ public class Paralysis : Effector
     }
     protected override void DoEffect()
     {
-        if(onEntity)
-            gameObject.GetComponent<Health>().moveSpeed = 0;
+        //if(onEntity)
+            //gameObject.GetComponent<Health>().moveSpeed = 0;
     }
 
     protected override void RevertEffect()
     {
-        if (onEntity)
-            gameObject.GetComponent<Health>().moveSpeed = GetComponent<Health>().defaultSpeed;
+        //if (onEntity)
+            //gameObject.GetComponent<Health>().moveSpeed = GetComponent<Health>().defaultSpeed;
     }
 }

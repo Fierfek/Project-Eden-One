@@ -39,7 +39,7 @@ public class Weapon : Item, IAttackable
         if (healthScript != null)
         {
             healthScript.takeDamage(damage);
-            healthScript.takeEffects(effects);
+            //healthScript.takeEffects(effects);
         }
     }
 }

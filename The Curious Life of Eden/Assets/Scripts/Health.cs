@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,6 +24,27 @@ public class Health : MonoBehaviour {
 		}
 	}
 
+    public void heal(int amount)
+    {
+        hp += amount;
+
+        if(temp_max > hp_max)
+        {
+            if(hp > temp_max)
+            {
+                hp = temp_max;
+            }
+        }
+        else if(temp_max <= hp_max)
+        {
+            if(hp > temp_max)
+            {
+                hp = temp_max;
+            }
+        }
+    }
+
+
 	public int getHealth() {
 		return hp;
 	}
@@ -48,4 +69,3 @@ public class Health : MonoBehaviour {
 		temp_max = newMax;
 	}
 }
->>>>>>> master
