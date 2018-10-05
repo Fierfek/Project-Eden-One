@@ -48,4 +48,3 @@ public class Health : MonoBehaviour {
 		temp_max = newMax;
 	}
 }
->>>>>>> master
