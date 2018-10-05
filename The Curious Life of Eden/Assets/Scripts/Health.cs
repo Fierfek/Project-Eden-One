@@ -1,50 +1,3 @@
-<<<<<<< HEAD
-﻿using UnityEngine;
-
-public class Health : MonoBehaviour
-{
-	public int health;
-    public float moveSpeed;
-    public float defaultSpeed;
-
-	public void takeDamage(int damage)
-	{
-		health -= damage;
-		if (health <= 0)
-		{
-			die();
-		}
-	}
-
-    /*<summary>
-     * This function takes an array of GameObjects from the collided weapon
-     * Each GameObject should contain an Effector that will be cloned onto the Entity
-     * </summary>
-     */
-    public void takeEffects(GameObject[] weaponEffectors)
-    {
-        foreach(GameObject effectorObject in weaponEffectors)
-        {
-            Effector effect = effectorObject.GetComponent<Effector>();
-            //This switch case will add scripts to the gameObject depending on the type
-            //and adds corresponding attributes of each found Effector (e.g. timeDuration)
-            switch (effect.type)
-            {
-                case Effector.EffectType.Paralysis:
-                        Paralysis entityEffect = gameObject.AddComponent<Paralysis>();
-                        entityEffect.timeDuration = effect.timeDuration;
-                        entityEffect.type = effect.type;
-                    break;
-            }
-        }
-    }
-
-	private void die()
-	{
-		Destroy(gameObject);
-	}
-}
-=======
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -71,6 +24,27 @@ public class Health : MonoBehaviour {
 		}
 	}
 
+    public void heal(int amount)
+    {
+        hp += amount;
+
+        if(temp_max > hp_max)
+        {
+            if(hp > temp_max)
+            {
+                hp = temp_max;
+            }
+        }
+        else if(temp_max <= hp_max)
+        {
+            if(hp > temp_max)
+            {
+                hp = temp_max;
+            }
+        }
+    }
+
+
 	public int getHealth() {
 		return hp;
 	}
@@ -95,4 +69,4 @@ public class Health : MonoBehaviour {
 		temp_max = newMax;
 	}
 }
->>>>>>> 6a37ed09b07e8c42ba9274dc38e69f2193a4d06a
+

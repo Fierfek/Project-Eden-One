@@ -42,7 +42,7 @@ public class Bomb : Weapon
             if (h != null)
             {
                 h.takeDamage(damage);
-                h.takeEffects(effects);
+                
             
             }
         }
