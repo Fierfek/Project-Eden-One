@@ -8,9 +8,17 @@ public class Throwable : MonoBehaviour
     public int throwSpeed;
 
     private GameObject throwingItemInstance;
-    
+
+    private void Update()
+    {
+        if(Input.GetButtonDown("Fire2"))
+        {
+            consume(transform.right);
+        }
+    }
+
     //Decrements amount of throwable item in inventory, then calls throw method passing in the direction at which the item should be thrown
-	public void consume(Vector2 throwDirection)
+    public void consume(Vector2 throwDirection)
     {
         Debug.Log("Decrementing amount of throwable Item");
         throwItem(throwDirection);
@@ -21,7 +29,9 @@ public class Throwable : MonoBehaviour
     {
         float rot_z = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         direction.Normalize();
+        
         throwingItemInstance = Object.Instantiate(throwingItem, transform.position, Quaternion.Euler(0, 0, rot_z));
-        throwingItemInstance.GetComponent<Rigidbody2D>().velocity = throwSpeed * direction * Time.deltaTime;
+        throwingItemInstance.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
+        throwingItemInstance.GetComponent<Rigidbody2D>().velocity = throwSpeed * direction;
     }
 }

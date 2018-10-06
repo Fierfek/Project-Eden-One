@@ -6,7 +6,7 @@ public class Health : MonoBehaviour {
 
 	private int hp, hp_max, temp_max;
 
-	public Health() {
+    public Health() {
 
 	}
 
@@ -19,7 +19,7 @@ public class Health : MonoBehaviour {
 	public void takeDamage(int damage) {
 		hp -= damage;
 
-		if(hp < 0) {
+		if(hp <= 0) {
 			hp = 0;
 		}
 	}
@@ -28,22 +28,21 @@ public class Health : MonoBehaviour {
     {
         hp += amount;
 
-        if(temp_max > hp_max)
+        if (temp_max > hp_max)
         {
-            if(hp > temp_max)
+            if (hp > temp_max)
             {
                 hp = temp_max;
             }
         }
-        else if(temp_max <= hp_max)
+        else if (temp_max <= hp_max)
         {
-            if(hp > temp_max)
+            if (hp > temp_max)
             {
                 hp = temp_max;
             }
         }
     }
-
 
 	public int getHealth() {
 		return hp;
