@@ -6,7 +6,12 @@ public class Health : MonoBehaviour {
 
 	private int hp, hp_max, temp_max;
 
-	public Health() {
+    private void Start()
+    {
+        hp = 100;
+        hp_max = 100;
+    }
+    public Health() {
 
 	}
 
@@ -19,8 +24,9 @@ public class Health : MonoBehaviour {
 	public void takeDamage(int damage) {
 		hp -= damage;
 
-		if(hp < 0) {
+		if(hp <= 0) {
 			hp = 0;
+            die();
 		}
 	}
 
@@ -68,4 +74,9 @@ public class Health : MonoBehaviour {
 	public void setTempMax(int newMax) {
 		temp_max = newMax;
 	}
+
+    public void die()
+    {
+        Destroy(gameObject);
+    }
 }

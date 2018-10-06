@@ -37,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1273212120476862}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.16, y: 0.16, z: 0}
-  m_LocalScale: {x: 0.245, y: 0.27915198, z: 1}
+  m_LocalPosition: {x: -3.258, y: -0.976, z: 0}
+  m_LocalScale: {x: 0.230545, y: 0.27915198, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -93,9 +93,11 @@ MonoBehaviour:
   itemSprite: {fileID: 0}
   effects: []
   damage: 50
-  isRanged: 0
+  isRanged: 1
   radius: 3
   time: 3
+  explosionEffect: {fileID: 1779933330399914, guid: faeb1f31b980b2546ba758a240cba8e3,
+    type: 2}
 --- !u!212 &212619255641483170
 SpriteRenderer:
   m_ObjectHideFlags: 1
