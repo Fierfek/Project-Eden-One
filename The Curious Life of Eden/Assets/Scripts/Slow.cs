@@ -2,29 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Paralysis : Effector
+public class Slow : Effector
 {
     bool onEntity;
     float defaultSpeed;
-
-    private void Start()
+    // Use this for initialization
+    void Start()
     {
+
         onEntity = (gameObject.GetComponent<PlayerMovement>() != null);
-        type = EffectType.Paralysis;
+        type = EffectType.Slow;
         defaultSpeed = gameObject.GetComponent<PlayerMovement>().movementSpeed;
-        timeElapsed = 0f;
+
     }
+
+    // Update is called once per frame
     protected override void DoEffect()
     {
+
         if (onEntity)
-            gameObject.GetComponent<PlayerMovement>().movementSpeed = 0;
+        {
+            gameObject.GetComponent<PlayerMovement>().movementSpeed = defaultSpeed / 2;
+            onEntity = false;
+        }
     }
 
     protected override void RevertEffect()
     {
-
-        if (onEntity)
-            gameObject.GetComponent<PlayerMovement>().movementSpeed = defaultSpeed;
-
+        gameObject.GetComponent<PlayerMovement>().movementSpeed = defaultSpeed;
     }
 }

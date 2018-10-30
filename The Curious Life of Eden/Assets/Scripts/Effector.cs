@@ -3,7 +3,7 @@ using UnityEngine;
 
 public abstract class Effector : MonoBehaviour
 {
-    private float timeElapsed = 0f;
+    protected float timeElapsed = 0f;
     public float timeDuration;
     public EffectType type;
 
