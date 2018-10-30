@@ -7,6 +7,7 @@ public class Slow : Effector
     bool onEntity;
     float defaultSpeed;
     // Use this for initialization
+
     void Start ()
     {
 
@@ -29,6 +30,6 @@ public class Slow : Effector
 
     protected override void RevertEffect()
     {
-            gameObject.GetComponent<PlayerMovement>().movementSpeed = defaultSpeed;
+        gameObject.GetComponent<PlayerMovement>().movementSpeed = defaultSpeed;
     }
 }

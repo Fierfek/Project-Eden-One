@@ -22,8 +22,6 @@ public class Poison : Effector {
             hp.takeDamage(1);
             counter += 1f;
         }
-        
-        
     }
 
     protected override void RevertEffect()

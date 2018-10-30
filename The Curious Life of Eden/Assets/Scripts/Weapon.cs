@@ -5,7 +5,7 @@ public class Weapon : Item, IAttackable
     public GameObject[] effects;
     public int damage;
     public bool isRanged;
-    
+
     /// <summary>
     /// This function is the most generic form of attack for a weapon
     /// </summary>
@@ -20,12 +20,12 @@ public class Weapon : Item, IAttackable
     /// </summary>
     public virtual void OnSkillUsed()
     {
-        
+
     }
 
     public override void OnItemUsed()
     {
-        
+
     }
 
     /// <summary>
@@ -34,7 +34,6 @@ public class Weapon : Item, IAttackable
     /// <param name="other"></param>
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Triggered");
         Health healthScript = other.gameObject.GetComponent<Health>();
         if (healthScript != null)
         {
@@ -63,14 +62,13 @@ public class Weapon : Item, IAttackable
             }
             else if (effect.GetComponent<Slow>() != null)
             {
+
                 if(thing.GetComponent<Slow>() == null)
                 {
                     thing.AddComponent<Slow>();
                     thing.GetComponent<Slow>().timeDuration = effect.GetComponent<Slow>().timeDuration;
                 }
-                
             }
         }
-       
     }
 }

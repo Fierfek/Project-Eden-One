@@ -9,37 +9,30 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-
-  m_RootGameObject: {fileID: 1787578303485274}
+  m_RootGameObject: {fileID: 1846086405704454}
   m_IsPrefabAsset: 1
---- !u!1 &1787578303485274
+--- !u!1 &1846086405704454
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-
-  - component: {fileID: 4487707326448712}
-  - component: {fileID: 114083116392845248}
-
+  - component: {fileID: 4077557261368344}
+  - component: {fileID: 114229253803281224}
   m_Layer: 0
-  m_Name: Poison
+  m_Name: ObjectPooler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-
---- !u!4 &4487707326448712
-
+--- !u!4 &4077557261368344
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-
-  m_GameObject: {fileID: 1787578303485274}
-
+  m_GameObject: {fileID: 1846086405704454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -47,22 +40,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-
---- !u!114 &114083116392845248
-
+--- !u!114 &114229253803281224
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-
-  m_GameObject: {fileID: 1787578303485274}
-
+  m_GameObject: {fileID: 1846086405704454}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80c29163488b1bc4b91909d3330abb83, type: 3}
+  m_Script: {fileID: 11500000, guid: cd1cdde2dd3d9ca4aa00c07c86183066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-
-  timeDuration: 2
-  type: 1
-
+  pools:
+  - tag: trap
+    prefab: {fileID: 1611253641927504, guid: 22d4d5f7d8a3d7847a1d5f35d5572691, type: 2}
+    size: 3

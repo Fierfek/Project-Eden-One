@@ -6,7 +6,7 @@ public class Paralysis : Effector
 {
     bool onEntity;
     float defaultSpeed;
-    
+
     private void Start()
     {
         onEntity = (gameObject.GetComponent<PlayerMovement>() != null);
@@ -16,7 +16,6 @@ public class Paralysis : Effector
     }
     protected override void DoEffect()
     {
-
         if(onEntity)
             gameObject.GetComponent<PlayerMovement>().movementSpeed = 0;
     }
