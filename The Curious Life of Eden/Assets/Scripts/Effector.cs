@@ -3,9 +3,9 @@ using UnityEngine;
 
 public abstract class Effector : MonoBehaviour
 {
+
     protected float timeElapsed = 0f;
     public float timeDuration;
-    public EffectType type;
 
     public enum EffectType
     {
@@ -14,6 +14,11 @@ public abstract class Effector : MonoBehaviour
         Paralysis,
         Slow
     };
+
+    public EffectType getType()
+    {
+        return type;
+    }
 
     private void Update()
     {
@@ -31,8 +36,7 @@ public abstract class Effector : MonoBehaviour
                 //Otherwise destroy script
                 else
                 {
-                    if (type == EffectType.Slow || type == EffectType.Paralysis)
-                        RevertEffect();
+                    RevertEffect();
                     Destroy(this);
                 }
             }
@@ -50,4 +54,6 @@ public abstract class Effector : MonoBehaviour
 
     //REVERT EFFECT HERE (for effects like paralysis)
     protected abstract void RevertEffect();
+
+  
 }

@@ -16,7 +16,7 @@ public class Paralysis : Effector
     }
     protected override void DoEffect()
     {
-        if (onEntity)
+        if(onEntity)
             gameObject.GetComponent<PlayerMovement>().movementSpeed = 0;
     }
 

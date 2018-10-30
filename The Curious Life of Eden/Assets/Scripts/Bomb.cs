@@ -42,7 +42,7 @@ public class Bomb : Weapon
             if (h != null)
             {
                 h.takeDamage(damage);
-                
+                GiveEffects(nearobject.gameObject);
             
             }
         }
@@ -52,7 +52,9 @@ public class Bomb : Weapon
         //knockback?
 
         //remove bomb
+        Destroy(explosionEffect);
         Destroy(gameObject);
+        
     }
 }
 

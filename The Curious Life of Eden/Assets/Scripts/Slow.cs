@@ -7,7 +7,8 @@ public class Slow : Effector
     bool onEntity;
     float defaultSpeed;
     // Use this for initialization
-    void Start()
+
+    void Start ()
     {
 
         onEntity = (gameObject.GetComponent<PlayerMovement>() != null);

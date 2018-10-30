@@ -46,6 +46,7 @@ public class Weapon : Item, IAttackable
     {
         //thing.AddComponent<Paralysis>();
         //thing.GetComponent<Paralysis>().timeDuration = 5;
+
         foreach (GameObject effect in effects)
         {
             if (effect.GetComponent<Paralysis>() != null)
@@ -61,14 +62,13 @@ public class Weapon : Item, IAttackable
             }
             else if (effect.GetComponent<Slow>() != null)
             {
-                if (thing.GetComponent<Slow>() == null)
+
+                if(thing.GetComponent<Slow>() == null)
                 {
                     thing.AddComponent<Slow>();
                     thing.GetComponent<Slow>().timeDuration = effect.GetComponent<Slow>().timeDuration;
                 }
-
             }
         }
-
     }
 }

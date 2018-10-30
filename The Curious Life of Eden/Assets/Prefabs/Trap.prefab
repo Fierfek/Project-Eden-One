@@ -86,7 +86,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.1, y: 0.72}
   m_EdgeRadius: 0
 --- !u!114 &114980012288168718
 MonoBehaviour:
@@ -102,7 +102,7 @@ MonoBehaviour:
   itemName: 
   itemSprite: {fileID: 0}
   effects:
-  - {fileID: 1827008652763650, guid: e658a7df67aaf974db35321592c7cba6, type: 2}
+  - {fileID: 1274223844044814, guid: 81d976e55f2fcf148aeed26295cf48a4, type: 2}
   damage: 0
   isRanged: 0
 --- !u!212 &212209811140748734
