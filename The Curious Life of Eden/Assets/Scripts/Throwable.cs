@@ -6,8 +6,15 @@ public class Throwable : MonoBehaviour
     {
     public GameObject throwingItem;
     public int throwSpeed;
+    public string tag;
 
     private GameObject throwingItemInstance;
+    private ObjectPooler objectPooler;
+
+    private void Start()
+    {
+        objectPooler = ObjectPooler.Instance;
+    }
 
     private void Update()
     {
@@ -29,8 +36,7 @@ public class Throwable : MonoBehaviour
     {
         float rot_z = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         direction.Normalize();
-        
-        throwingItemInstance = Object.Instantiate(throwingItem, transform.position, Quaternion.Euler(0, 0, rot_z));
+        throwingItemInstance = objectPooler.SpawnFromPool(tag, transform.position, Quaternion.Euler(0, 0, rot_z));
         throwingItemInstance.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
         throwingItemInstance.GetComponent<Rigidbody2D>().velocity = throwSpeed * direction;
     }
