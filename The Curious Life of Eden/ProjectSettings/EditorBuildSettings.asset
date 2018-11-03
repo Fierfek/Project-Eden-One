@@ -6,6 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/AK_SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/AK_Character_Scene.unity
+    guid: e3237d38561ad4c37bd01b73ceb5824a
+  - enabled: 1
+    path: Assets/Scenes/CreditsScene.unity
+    guid: 6aa93027311ca4943b87b7d3de34d63b
+  - enabled: 1
+    path: Assets/Scenes/DummyIngameScene.unity
+    guid: c96b654598fc3aa42b09930ec9364984
+  - enabled: 1
+    path: Assets/Scenes/Eden Test Scene.unity
+    guid: e009f6f225340004ba1201a9d95ff3cf
+  - enabled: 1
+    path: Assets/Scenes/Josh_Coyco_Test.unity
+    guid: 8cf5a2fd0169e68449fb277e6c3b7ae4
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 91096555bb2ad494e871795d15f2fd01
+  - enabled: 1
+    path: Assets/Scenes/SampleMenuScene.unity
+    guid: 959dedcf86b0f354593991c49c78d44d
   m_configObjects: {}
