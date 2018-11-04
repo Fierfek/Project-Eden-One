@@ -9,30 +9,30 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1827008652763650}
+  m_RootGameObject: {fileID: 1274223844044814}
   m_IsPrefabAsset: 1
---- !u!1 &1827008652763650
+--- !u!1 &1274223844044814
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4201116286646520}
-  - component: {fileID: 114327913828352662}
+  - component: {fileID: 4418361939388040}
+  - component: {fileID: 114123251699680020}
   m_Layer: 0
-  m_Name: Paralysis
+  m_Name: Poison
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4201116286646520
+--- !u!4 &4418361939388040
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1827008652763650}
+  m_GameObject: {fileID: 1274223844044814}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,15 +40,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114327913828352662
+--- !u!114 &114123251699680020
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1827008652763650}
+  m_GameObject: {fileID: 1274223844044814}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90470ca14f381a346a11816065000a89, type: 3}
+  m_Script: {fileID: 11500000, guid: 80c29163488b1bc4b91909d3330abb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeDuration: 5
+  timeDuration: 10

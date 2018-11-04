@@ -39,7 +39,38 @@ public class Weapon : Item, IAttackable
         if (healthScript != null)
         {
             healthScript.takeDamage(damage);
-            //healthScript.takeEffects(effects);
+            GiveEffects(other.gameObject);
         }
+    }
+
+    protected void GiveEffects(GameObject thing)
+    {
+        //thing.AddComponent<Paralysis>();
+        //thing.GetComponent<Paralysis>().timeDuration = 5;
+
+        foreach (GameObject effect in effects)
+        {
+            if (effect.GetComponent<Paralysis>() != null)
+            {
+                thing.AddComponent<Paralysis>();
+                thing.GetComponent<Paralysis>().timeDuration = effect.GetComponent<Paralysis>().timeDuration;
+
+            }
+            else if (effect.GetComponent<Poison>() != null)
+            {
+                thing.AddComponent<Poison>();
+                thing.GetComponent<Poison>().timeDuration = effect.GetComponent<Poison>().timeDuration;
+            }
+            else if (effect.GetComponent<Slow>() != null)
+            {
+                if(thing.GetComponent<Slow>() == null)
+                {
+                    thing.AddComponent<Slow>();
+                    thing.GetComponent<Slow>().timeDuration = effect.GetComponent<Slow>().timeDuration;
+                }
+                
+            }
+        }
+       
     }
 }
