@@ -3318,6 +3318,16 @@ Prefab:
       propertyPath: m_Radius
       value: 0.9
       objectReference: {fileID: 0}
+    - target: {fileID: 58069056353126006, guid: 3fd8d5e54e24a574d9800983f348b0df,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 50573917398923910, guid: 3fd8d5e54e24a574d9800983f348b0df,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fd8d5e54e24a574d9800983f348b0df, type: 2}
   m_IsPrefabAsset: 0
