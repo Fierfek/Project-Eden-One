@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : CharacterBase {
 
     public float movementSpeed;
     Rigidbody2D rigidBody;
-    private Vector2 direction; 
+    private Vector2 direction;
 
     // Use this for initialization
     void Start () {
+        base.Start();
         rigidBody = GetComponent<Rigidbody2D>();
+        
 	}
 	
 	// Update is called once per frame
@@ -18,6 +20,12 @@ public class PlayerMovement : MonoBehaviour {
         direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         direction.Normalize();
 
-        rigidBody.MovePosition(rigidBody.position + (direction * movementSpeed * Time.deltaTime));
+        newPos = rigidBody.position + (direction * movementSpeed * Time.deltaTime);
+
+        changePos = newPos - body.position;
+
+        rigidBody.MovePosition(newPos);
+
+        base.Update();
     }
 }

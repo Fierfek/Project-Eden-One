@@ -3240,6 +3240,29 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1463824818 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1938682262382096, guid: 3fd8d5e54e24a574d9800983f348b0df,
+    type: 2}
+  m_PrefabInternal: {fileID: 1561213667}
+--- !u!95 &1463824819
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1463824818}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 94569f8f167c1bf4d9ae3195fe8edb02, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1561213667
 Prefab:
   m_ObjectHideFlags: 0
