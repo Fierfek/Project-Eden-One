@@ -12,7 +12,7 @@ public class Slow : Effector
 
         onEntity = (gameObject.GetComponent<PlayerMovement>() != null);
         type = EffectType.Slow;
-        defaultSpeed = gameObject.GetComponent<PlayerMovement>().movementSpeed;
+        defaultSpeed = gameObject.GetComponent<PlayerMovement>().speed;
 
     }
 
@@ -22,13 +22,13 @@ public class Slow : Effector
 
         if (onEntity)
         {
-            gameObject.GetComponent<PlayerMovement>().movementSpeed = defaultSpeed / 2;
+            gameObject.GetComponent<PlayerMovement>().speed = defaultSpeed / 2;
             onEntity = false;
         }
     }
 
     protected override void RevertEffect()
     {
-            gameObject.GetComponent<PlayerMovement>().movementSpeed = defaultSpeed;
+            gameObject.GetComponent<PlayerMovement>().speed = defaultSpeed;
     }
 }

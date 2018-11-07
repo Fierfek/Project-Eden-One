@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 50573917398923910}
   - component: {fileID: 114930664551527886}
   - component: {fileID: 114473934496269364}
+  - component: {fileID: 95061790223272534}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -39,8 +40,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1938682262382096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.09, y: 0.3, z: 0}
-  m_LocalScale: {x: 3.65, y: 3.46, z: 1}
+  m_LocalPosition: {x: 0, y: 1.58, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -52,19 +53,19 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1938682262382096}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &58069056353126006
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -77,9 +78,27 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.72}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.9
+--- !u!95 &95061790223272534
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1938682262382096}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 94569f8f167c1bf4d9ae3195fe8edb02, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114473934496269364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,6 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e597c409cb66a4a4b8efabea1952d80d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 3
   movementSpeed: 5
 --- !u!212 &212446887361946888
 SpriteRenderer:
@@ -156,7 +176,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 80cc04af11f9e4d4288864c37c947531, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

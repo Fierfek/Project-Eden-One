@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : CharacterBase {
 
-    public float movementSpeed;
     Rigidbody2D rigidBody;
     private Vector2 direction;
 
@@ -20,7 +19,7 @@ public class PlayerMovement : CharacterBase {
         direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         direction.Normalize();
 
-        newPos = rigidBody.position + (direction * movementSpeed * Time.deltaTime);
+        newPos = rigidBody.position + (direction * speed * Time.deltaTime);
 
         changePos = newPos - body.position;
 

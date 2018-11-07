@@ -11,21 +11,21 @@ public class Paralysis : Effector
     {
         onEntity = (gameObject.GetComponent<PlayerMovement>() != null);
         type = EffectType.Paralysis;
-        defaultSpeed = gameObject.GetComponent<PlayerMovement>().movementSpeed;
+        defaultSpeed = gameObject.GetComponent<PlayerMovement>().speed;
         timeElapsed = 0f;
     }
     protected override void DoEffect()
     {
 
         if(onEntity)
-            gameObject.GetComponent<PlayerMovement>().movementSpeed = 0;
+            gameObject.GetComponent<PlayerMovement>().speed = 0;
     }
 
     protected override void RevertEffect()
     {
 
         if (onEntity)
-            gameObject.GetComponent<PlayerMovement>().movementSpeed = defaultSpeed;
+            gameObject.GetComponent<PlayerMovement>().speed = defaultSpeed;
 
     }
 }
