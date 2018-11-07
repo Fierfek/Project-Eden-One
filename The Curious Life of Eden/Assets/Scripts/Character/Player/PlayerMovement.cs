@@ -10,7 +10,7 @@ public class PlayerMovement : CharacterBase {
     // Use this for initialization
     void Start () {
         base.Start();
-        rigidBody = GetComponent<Rigidbody2D>();
+        rigidBody = GetComponentInChildren<Rigidbody2D>();
         
 	}
 	
