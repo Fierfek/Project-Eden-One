@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour {
 
-	private int hp, hp_max, temp_max;
+	public int hp, hp_max, temp_max;
 
     public Health() {
 

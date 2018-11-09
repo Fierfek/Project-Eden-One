@@ -9,30 +9,30 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1827008652763650}
+  m_RootGameObject: {fileID: 1846086405704454}
   m_IsPrefabAsset: 1
---- !u!1 &1827008652763650
+--- !u!1 &1846086405704454
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4201116286646520}
-  - component: {fileID: 114327913828352662}
+  - component: {fileID: 4077557261368344}
+  - component: {fileID: 114229253803281224}
   m_Layer: 0
-  m_Name: Paralysis
+  m_Name: ObjectPooler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4201116286646520
+--- !u!4 &4077557261368344
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1827008652763650}
+  m_GameObject: {fileID: 1846086405704454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,15 +40,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114327913828352662
+--- !u!114 &114229253803281224
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1827008652763650}
+  m_GameObject: {fileID: 1846086405704454}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90470ca14f381a346a11816065000a89, type: 3}
+  m_Script: {fileID: 11500000, guid: cd1cdde2dd3d9ca4aa00c07c86183066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeDuration: 5
+  pools:
+  - tag: trap
+    prefab: {fileID: 1611253641927504, guid: 22d4d5f7d8a3d7847a1d5f35d5572691, type: 2}
+    size: 3
