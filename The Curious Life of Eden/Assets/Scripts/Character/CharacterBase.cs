@@ -41,6 +41,26 @@ public abstract class CharacterBase : MonoBehaviour {
             state = "Idle";
         }
 
+        //Implementing the health class
+
+        //checking current health
+        int hp = health.getHealth();
+
+
+        //Looking at max health possible
+        int max = health.getMax();
+
+
+        if(hp > max) {
+            hp = max;
+        }
+        print("hp is currently at " + hp);
+
+        if (hp == 0){
+            //maybe want to do something here. Not entirely sure though lol
+            print("you are dead");
+        }
+
         anim.Play(state);
 	}
 }
